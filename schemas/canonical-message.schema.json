@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/sovereign-ai-memory/canonical-message.schema.json",
+  "title": "Sovereign AI Canonical Message",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "id",
+    "vendor",
+    "source_id",
+    "session_id",
+    "role",
+    "text",
+    "source_ref",
+    "source_sha256",
+    "metadata"
+  ],
+  "properties": {
+    "schema_version": {"const": 1},
+    "id": {"type": "string", "minLength": 16},
+    "vendor": {"enum": ["codex", "claude", "grok", "generic"]},
+    "source_id": {"type": "string", "minLength": 16},
+    "session_id": {"type": "string", "minLength": 1},
+    "timestamp": {"type": ["string", "null"]},
+    "role": {"enum": ["user", "assistant"]},
+    "text": {"type": "string", "minLength": 1},
+    "source_ref": {"type": "string", "minLength": 1},
+    "source_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "metadata": {"type": "object"}
+  }
+}

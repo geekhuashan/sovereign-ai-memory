@@ -1,0 +1,20 @@
+# Local runtime data and user configuration
+.private/
+.env
+.env.*
+!.env.example
+memory/
+*.sqlite
+*.sqlite3
+*.db
+*.jsonl
+# Python build and development files
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+.DS_Store

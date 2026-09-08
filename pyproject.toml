@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sovereign-ai-memory"
+version = "0.1.0"
+description = "Local-first search and cited context across AI coding conversations"
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "geekhuashan"}]
+requires-python = ">=3.11"
+dependencies = []
+keywords = ["ai", "memory", "local-first", "codex", "claude", "search"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Topic :: Text Processing :: Indexing",
+]
+
+[project.urls]
+Homepage = "https://github.com/geekhuashan/sovereign-ai-memory"
+Repository = "https://github.com/geekhuashan/sovereign-ai-memory"
+Issues = "https://github.com/geekhuashan/sovereign-ai-memory/issues"
+
+[project.scripts]
+sam = "sovereign_memory.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
